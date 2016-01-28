@@ -1,10 +1,31 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title></title>
+<title>My page</title>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1" />
+<link href="app.css" rel="stylesheet">
+<script src="app.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+      <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
 </head>
 <body>
-
+<header>
+	<nav class="navbar navbar-default">
+		<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="/">Angular page</a>
+			</div>
+			
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="#"><i class="fa fa-home"></i>Home</a></li>
+				<li><a href="#about"><i class="fa fa-shield"></i>About</a></li>
+				<li><a href="#resume"><i class="fa fa-resum"></i>Resume</a></li>
+				<li><a href="#contacts"><i class="fa fa-comment"></i>Contact</a></li>
+			</ul>
+		</div>
+	</nav>	
+</header>
+<div id="main"></div>
 </body>
 </html>
