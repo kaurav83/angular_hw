@@ -1,17 +1,16 @@
 <!DOCTYPE HTML>
-<html>
+<html ng-app="scotchApp">
 <head>
 <title>About me</title>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1" />
-<link href="app.css" rel="stylesheet">
-<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
-<script src="app.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
-      <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
-</head>
-<body>
 
+
+</head>
+<body ng-controller="aboutController">
+<div class="jumbotron text-center">
+    <h1>About me</h1>
+
+    <p>{{ message }}</p>
+</div>
 </body>
 </html>
