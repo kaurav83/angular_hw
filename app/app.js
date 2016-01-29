@@ -1,6 +1,6 @@
 var scotchApp = angular.module('scotchApp', []);
 
-
+// создадим контроллер и внедрим $scope
 scotchApp.controller('mainController', function($scope) {
 
     // сообщение, которое мы хотим отобразить
@@ -11,35 +11,36 @@ scotchApp.controller('mainController', function($scope) {
 
 
 
-var scotchApp = angular.module('scotchApp', ['ngRoute']);
+var scotchApp = angular.module('scotchApp', ['ngRoute'])
 
-// маршруты
-scotchApp.config(function($routeProvider, $locationProvider) {
-    $routeProvider
+// настроим маршруты
+.config(function($routeProvider, $locationProvider) {
+    
 
-        
-        .when('/', {
-            templateUrl: 'home.html',
+        // маршрут для страницы home
+        $routeProvider.when('/home', {
+            templateUrl: 'pages/home.html',
             controller: 'mainController'
-        })
+        });
 
-       
-        .when('/about', {
-            templateUrl: '/about.html',
+        // маршрут для страницы about
+        $routeProvider.when('/about', {
+            templateUrl: 'pages/about.html',
             controller: 'aboutController'
-        })
+        });
 
-        
-        .when('/contact', {
-            templateUrl: 'contacts.html',
+        // маршрут для страницы contact
+        $routeProvider.when('/contact', {
+            templateUrl: 'pages/contacts.html',
             controller: 'contactController'
-        })
-        .when('/resume', {
-        	templateUrl: 'resume.html',
+        });
+        $routeProvider.when('/resume', {
+        	templateUrl: 'pages/resume.html',
         	controller: 'resumeController'
         });
         
-        $locationProvider.html5Mode(true);
+        
+        $routeProvider.otherwise({redirectTo: '/#'});
 });
 
 scotchApp.controller('mainController', function($scope) {
