@@ -40,7 +40,7 @@ var scotchApp = angular.module('scotchApp', ['ngRoute'])
         });
         
         
-        $routeProvider.otherwise({redirectTo: '/#'});
+        $routeProvider.otherwise({redirectTo: '/home'});
 });
 
 scotchApp.controller('mainController', function($scope) {
@@ -57,3 +57,4 @@ scotchApp.controller('contactController', function($scope) {
 scotchApp.controller('resumeController', function($scope){
 	$scope.message = 'Read our works. We hope you like them.';
 });
+
